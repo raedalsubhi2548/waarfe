@@ -1,0 +1,89 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <span class="logo-text">Waarfe</span>
+            </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">الخدمات</a></li>
+                    <li><a href="#">الباقات</a></li>
+                    <li><a href="#">أعمالنا</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                    <li><a href="#" class="btn btn-primary btn-sm">تواصل</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-toggle">
+                <i class="sicon-menu"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(11, 20, 18, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-sm) 0;
+    transition: var(--transition-base);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-black);
+    color: var(--color-text-main);
+    letter-spacing: -1px;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.main-nav a {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-base);
+    color: var(--color-text-main);
+    
+    &:hover {
+        color: var(--color-secondary);
+    }
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: var(--text-sm);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: var(--text-xl);
+    color: var(--color-text-main);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Simple toggle logic would be needed for mobile menu, keeping it simple for now */
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+</style>

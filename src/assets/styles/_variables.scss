@@ -1,0 +1,127 @@
+:root {
+  /* Waarfe Brand Colors */
+  --color-primary: #09382e;       /* Deep Emerald */
+  --color-primary-light: #0d4d40;
+  --color-secondary: #d7c676;     /* Soft Gold */
+  --color-secondary-hover: #e5d587;
+  --color-background: #0b1412;    /* Space Black-Green */
+  --color-surface: #0f1f1a;       /* Surface Dark */
+  --color-text-main: #f3f4f6;
+  --color-text-muted: #a7b0ad;
+  --color-border: rgba(215, 198, 118, 0.18);
+  --color-glow: #56cfe1;          /* Starlight Cyan */
+
+  /* Typography Tokens */
+  --font-family-base: 'Tajawal', sans-serif;
+  --font-family-display: 'Tajawal', sans-serif; /* Using Tajawal for both for consistency in Arabic */
+  
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 5rem;
+
+  /* UI Elements */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Animation */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-out;
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-base);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: var(--transition-base);
+  border: none;
+  
+  &.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    
+    &:hover {
+      background-color: var(--color-secondary-hover);
+      box-shadow: 0 0 15px rgba(215, 198, 118, 0.4);
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    
+    &:hover {
+      background-color: rgba(215, 198, 118, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+}
